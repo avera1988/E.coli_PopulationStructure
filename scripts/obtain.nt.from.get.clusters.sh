@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 #############################################################
 #	This scritp pars the faa clusters and look for the nt sequences in a concatenated file all.ecoli.fasta
-#	Dpendencies c_header_for_nt.pl, Comparative_genomics/scripts/removing.hyphen.plComparative_genomics/scripts/removing.hyphen.pl all.ecoli.fasta (index file with all genome ffn seq)
+#	Dpendencies c_header_for_nt.pl, removing.hyphen.pl all.ecoli.fasta (index file with all genome ffn seq)
 #Author Arturo Vera
 ############################################################
 
@@ -12,7 +12,7 @@ for i in *.faa; do
 	sed 's/>//'|\
 	fgrep -w -f - -A 1 \
 	all.ecoli.fasta |\
-	perl ~/bin/Comparative_genomics/scripts/removing.hyphen.pl > $name.ffn;
+	perl removing.hyphen.pl > $name.ffn;
 done
 
 for i in *.ffn ;
