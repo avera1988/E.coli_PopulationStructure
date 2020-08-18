@@ -6,13 +6,36 @@
 # Aug 2020
 # quark.vera@gmail.com
 #############################################################################################
-#Libraries
-library(tidyverse)
-library(rhierbaps)
-library(ggtree)
-library(phytools)
-library(ape)
 
+#Libraries
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+if(!require("ggtree")){
+	BiocManager::install("ggtree")
+	library(ggtree)
+}
+
+if (!require("tidyverse")){
+        install.packages("tidyverse")
+	library(tidyverse)
+}
+
+if (!require("rhierbaps")){
+        install.packages("rhierbaps")
+	library(rhierbaps)
+}
+
+if (!require("phytools")){
+        install.packages("phytools")
+	library(phytools)
+}
+
+if (!require("ape")){
+        install.packages("ape")
+	library(ape)
+}
 
 #Load genome Names
 
