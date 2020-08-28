@@ -4,6 +4,7 @@
 #	>gene_1_genome_1
 #
 #Author Arturo Vera
+# avera@ccg.unam.mx
 #############################################
 use warnings;
 use strict;
